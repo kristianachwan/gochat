@@ -5,7 +5,11 @@ import { useCollectionData } from 'react-firebase-hooks/firestore';
 import firebase from "@firebase/app-compat";
 //assets import 
 import sendIcon from '../assets/images/send-button.png'  
-
+import { Input, Container, Button, Img } from "@chakra-ui/react";
+ 
+// css 
+import './ChatRoom.css'
+import { useEffect } from "react";
 export default function ChatRoom () {
     // to add scroll effect to the latest msg
     const dummy = useRef()
@@ -19,7 +23,6 @@ export default function ChatRoom () {
       
     // to give idField 
     const [messages] = useCollectionData(query, {idField : "id"}) 
-
     // create 2 way binding value 
     const [currMsg, setCurrMsg] = useState('')
     // use async so that I am able to use await keyword 
@@ -33,18 +36,35 @@ export default function ChatRoom () {
         photoURL
       }) 
       setCurrMsg('')
-      dummy.current.scrollIntoView({behaviour: 'smooth'})
-    }
+      dummy.current.scrollIntoView({behaviour: 'smooth'}) 
+
+      
+    } 
+   
     return (
-      <>
-        <main className="chatRoom">
-          {messages && messages.map(msg => <><ChatMessage key={msg.id} message={msg}/></>)}
-          <span ref={dummy}></span>
-        </main>
-        <form onSubmit={sendMessage}>
-          <input value={currMsg} onChange={e => setCurrMsg(e.target.value)}/> 
-          <button type="submit"><img src={sendIcon}/></button> 
-        </form>
-      </>
+    <Container className="iphone">      
+      <div className="iphone-small-round-top"></div>
+      <div className="iphone-round-top-left"></div>
+      <div className="iphone-speaker"></div>
+      <Container className="iphone-screenshot" p="0">
+      <Container w="100%" height={700} overflowY="scroll" className="chatRoom">
+        {messages && messages.map(msg => <ChatMessage key={Math.random()} message={msg}/>)}
+        <span ref={dummy}></span>
+      </Container>
+
+      <form onSubmit={sendMessage}> 
+        <Container w="100%" display="flex" flexWrap="nowrap" p="0" justifyContent="space-between">
+          <Input value={currMsg} onChange={e => setCurrMsg(e.target.value)}/> 
+          <Button type="submit"><Img w="30px" src={sendIcon}/></Button> 
+        </Container>       
+      </form> 
+      </Container> 
+      <div className="iphone-button"></div>
+
+    </Container>
+
+      
+
+
     )
-  } 
+} 
