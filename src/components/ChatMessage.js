@@ -7,13 +7,12 @@ export default function ChatMessage({message, id}) {
     const messageClass = uid === projectAuth.currentUser.uid ? 'from-me' : 'from-them'
     return (
       <Container  
-        my="1"
         w="100%" 
         className="line-container" 
         display="flex" 
         flexDirection={messageClass == 'from-me' ? 'row-reverse' : '' }>
-        <Image src={photoURL} boxSize="50px" borderRadius="full"/>
-        <Container flexGrow="1" className={`${messageClass} message`}>
+        <Image mt={1} p={1} src={photoURL} boxSize="50px" overflow="visible" borderRadius="full"/> 
+        <Container flexGrow="1" className="message">
           <p className={messageClass}>{text}</p>
         </Container>
       </Container>

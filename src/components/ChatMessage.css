@@ -5,7 +5,6 @@
     flex-direction: column;
     font-family: "SanFrancisco";
     font-size: 1.25rem;
-    margin: 0 auto 1rem;
     max-width: 600px;
     padding: 0.5rem 1.5rem;
 }
@@ -16,7 +15,8 @@
     max-width: 75%;
     padding: 0.5rem .875rem;
     position: relative;
-    word-wrap: break-word;
+    word-wrap: break-word; 
+    
 }
 
 .message p::before,
@@ -24,14 +24,10 @@
     bottom: -0.1rem;
     content: "";
     height: 1rem;
-    position: absolute;
+    position: absolute; 
 }
 
-p.from-me {
-    align-self: flex-end;
-    background-color: #248bf5;
-    color: #fff; 
-}
+
 
 p.from-me::before {
     border-bottom-left-radius: 0.8rem 0.7rem;
@@ -48,6 +44,11 @@ p.from-me::after {
     width: 10px;
 }
 
+p.from-me {
+    align-self: flex-end;
+    background-color: #248bf5;
+    color: #fff; 
+} 
 
 p.from-them {
     align-items: flex-start;
@@ -62,7 +63,7 @@ p.from-them:before {
 }
 
 p.from-them::after {
-    background-color: #fff;
+    background-color: #fff !important;
     border-bottom-right-radius: 0.5rem;
     left: 20px;
     transform: translate(-30px, -2px);

@@ -9,12 +9,12 @@ body {
 
 }
 
-* { 
+.chatRoom { 
   scrollbar-width: none; /* for Firefox */
   overflow-y: scroll; 
 }
 
-*::-webkit-scrollbar {
+.chatRoom::-webkit-scrollbar {
   display: none; /* for Chrome, Safari, and Opera */
 }
 code {

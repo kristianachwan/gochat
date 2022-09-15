@@ -42,23 +42,25 @@ export default function ChatRoom () {
     } 
    
     return (
-    <Container className="iphone">      
+    <Container className="iphone" zIndex="-1">      
       <div className="iphone-small-round-top"></div>
       <div className="iphone-round-top-left"></div>
       <div className="iphone-speaker"></div>
       <Container className="iphone-screenshot" p="0">
-      <Container w="100%" height={700} overflowY="scroll" className="chatRoom">
-        {messages && messages.map(msg => <ChatMessage key={Math.random()} message={msg}/>)}
-        <span ref={dummy}></span>
-      </Container>
+        <Container p="0" w="100%" height={700} overflowY="scroll" className="chatRoom" zIndex="-1">
+          {messages && messages.map(msg => <ChatMessage key={Math.random()} message={msg}/>)}
+          <span ref={dummy}></span>
+        </Container>
 
-      <form onSubmit={sendMessage}> 
-        <Container w="100%" display="flex" flexWrap="nowrap" p="0" justifyContent="space-between">
-          <Input value={currMsg} onChange={e => setCurrMsg(e.target.value)}/> 
-          <Button type="submit"><Img w="30px" src={sendIcon}/></Button> 
-        </Container>       
-      </form> 
+        <form onSubmit={sendMessage}> 
+          <Container w="95%" display="flex" flexWrap="nowrap" p="0" justifyContent="space-between">
+            <Input value={currMsg} onChange={e => setCurrMsg(e.target.value)}/> 
+            <Button type="submit"><Img w="30px" src={sendIcon}/></Button> 
+          </Container>       
+        </form>  
+        <Container h="5px"></Container>
       </Container> 
+
       <div className="iphone-button"></div>
 
     </Container>
