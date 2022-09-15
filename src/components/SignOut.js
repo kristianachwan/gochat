@@ -1,4 +1,4 @@
-import { projectAuth } from './config';
+import { projectAuth } from '../config';
 export default function SignOut(){
     return ( 
     <>

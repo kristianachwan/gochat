@@ -1,5 +1,5 @@
 import firebase from 'firebase/compat/app';  
-import { projectAuth } from './config';
+import { projectAuth } from '../config';
 export default function SignIn() {  
     
     const signInWithGoogle = () => {
