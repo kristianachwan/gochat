@@ -1,4 +1,4 @@
-body {
+/* body {
   background-color: #282c34;
 }
 
@@ -85,7 +85,7 @@ input {
 }
 
 button {
-  background-color: brown; /* Green */
+  background-color: brown; 
   border: none;
   color: white;
   padding: 15px 32px;
@@ -145,12 +145,12 @@ img {
   height: 40px;
   border-radius: 50%;
   margin: 2px 10px;
-}
+} */
 
 
 
 /*style for Imessage*/
-
+/* 
 .imessage {
   background-color: #fff;
   font-family: "SanFrancisco";
@@ -286,10 +286,10 @@ header p {
 form { 
   height: 100px; 
   
-}
+} */
 
 /* general styling */
-@font-face {
+/* @font-face {
   font-family: "SanFrancisco";
   src:
     url("https://cdn.rawgit.com/AllThingsSmitty/fonts/25983b71/SanFrancisco/sanfranciscodisplay-regular-webfont.woff2") format("woff2"),
@@ -336,7 +336,7 @@ h2 {
   margin-bottom: 1.25rem;
   max-width: 100%;
   padding: 0;
-}
+} */
 /* 
 @media screen and (max-width: 800px) {
   body {

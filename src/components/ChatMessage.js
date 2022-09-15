@@ -6,7 +6,7 @@ export default function ChatMessage({message, key}) {
     const messageClass = uid === projectAuth.currentUser.uid ? 'from-me' : 'from-them'
     return (
       <div className="line-container">
-      <div className={`imessage imessage${messageClass}`}>
+      <div className={`${messageClass}`}>
         <img src={photoURL} />
         <p className={messageClass}>{text}</p>
       </div>
