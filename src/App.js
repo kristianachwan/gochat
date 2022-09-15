@@ -15,19 +15,15 @@ import goChatIcon from './assets/images/favicon.png'
 import { projectAuth, projectFirestore } from './config';
 import firebase from 'firebase/compat/app'; 
 
+//importing component related to authentication 
+import SignIn from './SignIn';
 function App() {
   // get the user 
   const [user] = useAuthState(projectAuth) 
-  //sign in component 
-  const signInWithGoogle = () => {
-    const provider = new firebase.auth.GoogleAuthProvider() 
-    console.log('asd')
-    projectAuth.signInWithPopup(provider)
-  }
+  //sign in with google function 
+ 
 
-  function SignIn() {   
-    return (<button className="sign-in" onClick={signInWithGoogle}>Sign in with google</button>)
-  }
+  
   // sign out component
   function SignOut(){
     return ( 
