@@ -12,7 +12,7 @@ export default function ChatMessage({message, id}) {
         display="flex" 
         flexDirection={messageClass == 'from-me' ? 'row-reverse' : '' }>
         <Image mt={1} p={1} src={photoURL} boxSize="50px" overflow="visible" borderRadius="full"/> 
-        <Container flexGrow="1" className="message" fontSize={['0.75rem', '0.85rem', '1rem']}>
+        <Container flexGrow="1" className="message">
           <p className={messageClass}>{text}</p>
         </Container>
       </Container>
