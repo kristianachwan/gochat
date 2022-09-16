@@ -47,7 +47,7 @@ export default function ChatRoom () {
       <div className="iphone-round-top-left"></div>
       <div className="iphone-speaker"></div>
       <Container className="iphone-screenshot" p="0">
-        <Container p="0" w="90%" height={600} overflowY="scroll" className="chatRoom">
+        <Container p="0" w="90%" height="70vh" overflowY="scroll" className="chatRoom">
           {messages && messages.map(msg => <ChatMessage key={Math.random()} message={msg}/>)}
           <span ref={dummy}></span>
         </Container>
