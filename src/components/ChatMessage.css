@@ -19,12 +19,13 @@
     
 }
 
+
 .message p::before,
 .message p::after {
-    bottom: -0.1rem;
-    content: "";
-    height: 1rem;
-    position: absolute; 
+  bottom: -0.1rem;
+  content: "";
+  height: 1rem;
+  position: absolute;
 }
 
 
