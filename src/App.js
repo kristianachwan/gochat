@@ -24,12 +24,12 @@ function App() {
     return (
       <Container w="100%" h="100vh" className="App">
         <Container w="100%" display="flex" justifyContent="space-between">
-          <Image  
+          {/* <Image  
             mt={4}
             boxSize='50px'
             objectFit='cover'
             src={goChatIcon} alt='logo' 
-          />  
+          />   */}
           <Link href="https://github.com/kristianachwan/gochat" target="_blank">
             <Icon 
               className="social-media-icon" 
